@@ -18,6 +18,15 @@
 
 ## Deploy the project
 - `cdk deploy FizzbuzzStack`
+
+## CI/CD pipeline
+- `cdk deploy CICDPipelineStack`
+The pipeline will deploy the FizzBuzz Rest API
+### Pipeline requirements
+- [**SSH keypairs in SSM  for downloading the project from Github (SSH_KEY and SSH_PUB)**](https://www.ssh.com/ssh/keygen/)
+- [**Github personal access token stored in Secret Manager (fizzbuzz)**](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token)
+
+
 ## Useful commands
 
  * `npm run build`   compile typescript to js
