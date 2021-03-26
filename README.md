@@ -26,6 +26,9 @@ The pipeline will deploy the FizzBuzz Rest API
 - [**SSH keypairs in SSM  for downloading the project from Github (SSH_KEY and SSH_PUB)**](https://www.ssh.com/ssh/keygen/)
 - [**Github personal access token stored in Secret Manager (fizzbuzz)**](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token)
 
+## Testing the API using Postman
+- Add the API Key in the header as x-api-key
+![Testing with Postman](https://github.com/lukacsbarni/cdk-restApi-Lambda/blob/master/readme.jpg)
 
 ## Useful commands
 
