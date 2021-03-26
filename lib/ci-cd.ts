@@ -92,5 +92,28 @@ export class CICDPipelineStack extends cdk.Stack {
             }),
         });
 
+        const buildActionCdk = new codepipeline_actions.CodeBuildAction({
+            actionName: 'CdkBuild',
+            project: cdkBuild,
+            input: sourceOutput,
+            outputs: [cdkBuildOutput],
+            //outputs: [new codepipeline.Artifact()], // optional
+        });
+
+        const pipeline = new codepipeline.Pipeline(this, 'BackendPipeline', {
+            pipelineName: 'FizzBuzz-Pipeline',
+            restartExecutionOnUpdate: true,
+            stages: [
+                {
+                    stageName: 'Source',
+                    actions: [sourceAction],
+                },
+                {
+                    stageName: 'BuildAndDeploy',
+                    actions: [buildActionCdk],
+                },
+            ],
+        });
+
     }
 }
