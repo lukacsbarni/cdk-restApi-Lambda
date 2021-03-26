@@ -1,6 +1,7 @@
 {
     "REGION": "eu-central-1",
     "LOG_RETENTION": "7",
-    "ENVIRONMENT": "fizzbuzz"
+    "ENVIRONMENT": "fizzbuzz",
+    "GIT_BRANCH": "master"
 }
     
